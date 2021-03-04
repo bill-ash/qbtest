@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<QBWCXML>
+<AppName>Weltlink TMS</AppName>
+<AppID></AppID>
+<AppURL>http://localhost:8000/qwc/</AppURL>
+<AppDescription>Weltlink TMS Description</AppDescription>
+<AppSupport>http://localhost:8000/qwc/support/</AppSupport>
+<UserName>785bdfc2-e87c-49b9-8edb-368dc8bcf1e3</UserName>
+<OwnerID>{55a9fd50-79e9-44e4-8fef-98411c2e8785}</OwnerID>
+<FileID>{30830c9c-c1b7-4773-a12d-b193437a8fef}</FileID>
+<QBType>QBFS</QBType>
+<Scheduler>
+    <RunEveryNMinutes>15</RunEveryNMinutes>
+</Scheduler>
+</QBWCXML>
