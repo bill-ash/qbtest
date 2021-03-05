@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'customer',
+    
+    'testmodel',
     'django_quickbooks',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -120,3 +121,32 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+QBWC_SETTINGS = {
+    'QUEUE_MANAGER_CLASS': 'django_quickbooks.queue_manager.RedisManager',
+    'REDIS_DEFAULT_HOST': 'localhost',
+    'REDIS_DEFAULT_PORT': 6379,
+    'REDIS_DEFAULT_DB': 0,
+    'REDIS_DEFAULT_PASSWORD': None,
+    'APP_URL': 'http://localhost:8000/qwc/quickbooks-desktop',
+    'APP_SUPPORT': 'http://localhost:8000/qwc/quickbooks-desktop/support',
+    'APP_ID': '',
+    'APP_NAME': 'qbtest',
+    # 'APP_DESCRIPTION': "YOUR_APP_DESCRIPTION",
+    'OWNER_ID': '55a9fd50-79e9-44e4-8fef-98411c2e8785',
+    # 'LOCAL_MODEL_CLASSES': {
+    # # This is a pointing to my Customer Model in my app, replace with your own
+    #     'Invoice': '',
+    #     'Customer': '',
+    #     'CustomerPOS': 'Inventory.models.Customer',  
+    #     'ItemInventoryPOS': 'Inventory.models.Level7',
+    #     'VoucherPOS': 'Inventory.models.OrderVoucher',
+    #     'VendorPOS': 'Inventory.models.QBVendor',
+    #     'SalesReceiptPOS': 'Inventory.models.OrderReceipt',
+    # },
+    # if you want to handle Responses in some custom way you can inherit from the ResponseProcessor and point to it in this tuple
+  
+    # same as above but this is for POS (only in my fork)
+   
+    'TASKS_PER_REQUEST_LIMIT': 200, #only in my fork
+}
